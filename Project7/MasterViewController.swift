@@ -23,8 +23,9 @@ class MasterViewController: UITableViewController {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
                 
-                if json["metadata"]["responseInfo"]["status"] == 200 {
+                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
                     // ok for parse
+                    parseJSON(json)
                     
                 }
             }
@@ -75,7 +76,18 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
-    
+    func parseJSON(json: JSON) {
+        for result in json["results"].arrayValue {
+            let title = result["title"].stringValue
+            let body = result["body"].stringValue
+            let sigs = result["singnatureCount"].stringValue
+            let objs = ["title": title, "body": body, "sigs": sigs]
+            
+            objects.append(objs)
+        }
+        
+        tableView.reloadData()
+    }
     
 
 

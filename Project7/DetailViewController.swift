@@ -7,39 +7,45 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    var detailItem: AnyObject? {
+    
+    
+    var detailItem: [String: String]! {
         didSet {
-            // Update the view.
-            self.configureView()
+            collectData()
         }
     }
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-    }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func collectData() {
+        guard detailItem != nil else {return}
+        
+        if let body = detailItem["body"], title = detailItem["title"] {
+            var html = "<html>"
+            html += "<head>"
+            html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+            html += "<style> body { font-size: 150%; } </style>"
+            html += "</head>"
+            html += "<body>"
+            html += "<h2>" + title + "</h2>"
+            html += body
+            //sigs = detailItem["sigs"]
+           // html += "<h4>Signatures: " + sigs + "</h4>"
+            html += "</body>"
+            html += "</html>"
+            
+            let webView = UIWebView()
+            webView.loadHTMLString(html, baseURL: nil)
+            view = webView
+        }
+        
+    
     }
-
-
 }
-

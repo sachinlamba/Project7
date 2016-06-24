@@ -13,6 +13,7 @@
 		BB7F07041D1D20E0004FE253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F07021D1D20E0004FE253 /* Main.storyboard */; };
 		BB7F07061D1D20E0004FE253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7F07051D1D20E0004FE253 /* Assets.xcassets */; };
 		BB7F07091D1D20E0004FE253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7F07071D1D20E0004FE253 /* LaunchScreen.storyboard */; };
+		BB7F07111D1D2F78004FE253 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7F07101D1D2F78004FE253 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BB7F07051D1D20E0004FE253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7F07081D1D20E0004FE253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7F070A1D1D20E0004FE253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7F07101D1D2F78004FE253 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				BB7F07021D1D20E0004FE253 /* Main.storyboard */,
 				BB7F07051D1D20E0004FE253 /* Assets.xcassets */,
 				BB7F07071D1D20E0004FE253 /* LaunchScreen.storyboard */,
+				BB7F07101D1D2F78004FE253 /* SwiftyJSON.swift */,
 				BB7F070A1D1D20E0004FE253 /* Info.plist */,
 			);
 			path = Project7;
@@ -141,6 +144,7 @@
 				BB7F07011D1D20E0004FE253 /* DetailViewController.swift in Sources */,
 				BB7F06FF1D1D20E0004FE253 /* MasterViewController.swift in Sources */,
 				BB7F06FD1D1D20E0004FE253 /* AppDelegate.swift in Sources */,
+				BB7F07111D1D2F78004FE253 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
